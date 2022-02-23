@@ -26,11 +26,11 @@ const personalMovieDB = {
     genres: [],
     privat: false
 };
-
+// pirma uzduotis..automatizavima
 for (let i = 0; i < 2; i++) {
     const a = prompt('paskutinis matytas filmas?', ''),
           b = prompt('keliais balais ji vertinate?', '');
-
+// antra uzduotis
     if (a != null && b != null && a != '' && b != '' && a.length < 50) {
         personalMovieDB.movies[a] = b;
         console.log('done');
@@ -39,7 +39,7 @@ for (let i = 0; i < 2; i++) {
         i--;
     }
 }
-
+// trecioji uzduotis
 if(personalMovieDB.count < 10){
       console.log('perziurejote mazai filmu');
 }else if(personalMovieDB.count >= 10 && personalMovieDB.count < 30){
