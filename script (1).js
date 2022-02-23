@@ -12,24 +12,40 @@
 
 4) Потренироваться и переписать цикл еще двумя способами*/
 
-'use strict';
+
 
 // Код возьмите из предыдущего домашнего задания
 
-const numberOfFilms = +prompt('kiek filmu jus praziurejote', '');
+
+const numberOfFilms = +prompt('kiek filmu jus perziurejote?', '');
+
 const personalMovieDB = {
-  count: numberOfFilms,
-   movies: {},
-   actors: {},
-   genres: [],
-   privat: false
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
 };
-const a = prompt('koks jusu paskutinis matytas filmas', '');
-      b = prompt('keliais balais vertinate ji?', ''),
-      c = prompt('koks jusu paskutinis matytas filmas', ''),
-      d = prompt('keliais balais vertinate ji?', '');
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
 
-console.log(personalMovieDB);
+for (let i = 0; i < 2; i++) {
+    const a = prompt('paskutinis matytas filmas?', ''),
+          b = prompt('keliais balais ji vertinate?', '');
 
+    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+        personalMovieDB.movies[a] = b;
+        console.log('done');
+    } else {
+        console.log('error');
+        i--;
+    }
+}
+
+if(personalMovieDB.count < 10){
+      console.log('perziurejote mazai filmu');
+}else if(personalMovieDB.count >= 10 && personalMovieDB.count < 30){
+      console.log('jus geras ziurovas');
+}else if(personalMovieDB.count >= 30){
+      console.log('jus nuostabus ziurovas');
+}else{
+      console.log('ivyko klaida');
+}
