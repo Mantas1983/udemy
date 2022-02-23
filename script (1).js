@@ -49,3 +49,4 @@ if(personalMovieDB.count < 10){
 }else{
       console.log('ivyko klaida');
 }
+console.log(personalMovieDB);
